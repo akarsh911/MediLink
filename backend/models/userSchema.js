@@ -7,12 +7,12 @@ const userSchema = new mongoose.Schema({
     firstName : {
         type : String,
         required : true,
-        minLength : [3, "First Name must be atleast 3 characters long"]
+        // minLength : [3, "First Name must be atleast 3 characters long"]
     },
     lastName : {
         type : String,
         required : true,
-        minLength : [3, "Last Name must be atleast 3 characters long"]
+        // minLength : [3, "Last Name must be atleast 3 characters long"]
     },
     email : {
         type : String,
@@ -22,14 +22,14 @@ const userSchema = new mongoose.Schema({
     phone : {
         type : String,
         required : true,
-        minLength : [10, "Phone number must contain 10 numbers"],
-        maxLength : [10, "Phone number must contain 10 numbers"]
+        // minLength : [10, "Phone number must contain 10 numbers"],
+        // maxLength : [10, "Phone number must contain 10 numbers"]
     },
     nic : {
         type : String,
         required : true,
-        minLength : [12, "NIC must contain 12 numbers"],
-        maxLength : [12, "NIC must contain 12 numbers"]
+        // minLength : [12, "NIC must contain 12 numbers"],
+        // maxLength : [12, "NIC must contain 12 numbers"]
     },
     dob : {
         type : Date,
@@ -44,7 +44,7 @@ const userSchema = new mongoose.Schema({
         type : String,
         required : true,
         select : false,
-        minLength : [8, "Password must at least contain 8 characters"]
+        // minLength : [8, "Password must at least contain 8 characters"]
     },
     role : {
         type : String,
