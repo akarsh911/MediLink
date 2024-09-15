@@ -22,6 +22,7 @@ const AddNewDoctor = () => {
   const navigateTo = useNavigate();
 
   const departmentsArray = [
+    "General",
     "Pediatrics",
     "Orthopedics",
     "Cardiology",
@@ -31,6 +32,8 @@ const AddNewDoctor = () => {
     "Physical Therapy",
     "Dermatology",
     "ENT",
+    "Psychiatrist",
+    "Pediatrician"
   ];
 
   const handleAvatar = (e) => {
