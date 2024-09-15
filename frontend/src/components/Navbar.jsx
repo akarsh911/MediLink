@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("http://localhost:8000/api/v1/user/patient/logout", {
+      .get("https://medilinkai-backend.onrender.com/api/v1/user/patient/logout", {
         withCredentials: true,
       })
       .then((res) => {
