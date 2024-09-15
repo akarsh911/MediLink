@@ -61,7 +61,7 @@ const AddNewDoctor = () => {
       formData.append("doctorDepartment", doctorDepartment);
       formData.append("docAvatar", docAvatar);
       await axios
-        .post(`${process.env.REACT_APP_BACKEND_URL}/api/v1/user/doctor/addnew`, formData, {
+        .post("https://medilinkai-backend.onrender.com/api/v1/user/doctor/addnew", formData, {
           withCredentials: true,
           headers: { "Content-Type": "multipart/form-data" },
         })

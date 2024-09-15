@@ -23,7 +23,7 @@ const AddNewAdmin = () => {
     try {
       await axios
         .post(
-          `${process.env.REACT_APP_BACKEND_URL}/api/v1/user/admin/addnew`,
+          "https://medilinkai-backend.onrender.com/api/v1/user/admin/addnew",
           { firstName, lastName, email, phone, nic, dob, gender, password },
           {
             withCredentials: true,

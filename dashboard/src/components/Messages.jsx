@@ -11,7 +11,7 @@ const Messages = () => {
     const fetchMessages = async () => {
       try {
         const { data } = await axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/v1/message/getall`,
+          "https://medilinkai-backend.onrender.com/api/v1/message/getall",
           { withCredentials: true }
         );
         setMessages(data.messages);

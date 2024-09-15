@@ -13,7 +13,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const { data } = await axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/v1/appointment/getall`,
+          "https://medilinkai-backend.onrender.com/api/v1/appointment/getall",
           { withCredentials: true }
         );
         setAppointments(data.appointments);
@@ -27,7 +27,7 @@ const Dashboard = () => {
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
       const { data } = await axios.put(
-        `${process.env.REACT_APP_BACKEND_URL}/api/v1/appointment/update/${appointmentId}`,
+        "https://medilinkai-backend.onrender.com/api/v1/appointment/update/${appointmentId}",
         { status },
         { withCredentials: true }
       );
