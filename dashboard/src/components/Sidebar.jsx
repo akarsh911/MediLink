@@ -19,7 +19,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("https://medilinkai-backend.onrender.com/api/v1/user/admin/logout", {
+      .get("http://localhost:8000/api/v1/user/admin/logout", {
         withCredentials: true,
       })
       .then((res) => {

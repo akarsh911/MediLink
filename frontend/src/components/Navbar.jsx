@@ -5,13 +5,15 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { Context } from "../main";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
 
   const handleLogout = async () => {
     await axios
-      .get("https://medilinkai-backend.onrender.com/api/v1/user/patient/logout", {
+      .get("http://localhost:8000/api/v1/user/patient/logout", {
         withCredentials: true,
       })
       .then((res) => {

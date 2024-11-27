@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { Context } from "./main";
 import Login from "./Pages/Login";
+
 const App = () => {
   const { isAuthenticated, setIsAuthenticated, setUser } = useContext(Context);
 
@@ -19,7 +20,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://medilinkai-backend.onrender.com/api/v1/user/patient/me",
+          "http://localhost:8000/api/v1/user/patient/me",
           {
             withCredentials: true,
           }

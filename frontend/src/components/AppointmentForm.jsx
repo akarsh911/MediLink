@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
+
 const AppointmentForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -38,7 +39,7 @@ const AppointmentForm = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       const { data } = await axios.get(
-        "https://medilinkai-backend.onrender.com/api/v1/user/doctors",
+        "http://localhost:8000/api/v1/user/doctors",
         { withCredentials: true }
       );
       setDoctors(data.doctors);
@@ -51,7 +52,7 @@ const AppointmentForm = () => {
     try {
       const hasVisitedBool = Boolean(hasVisited);
       const { data } = await axios.post(
-        "https://medilinkai-backend.onrender.com/api/v1/appointment/post",
+        "http://localhost:8000/api/v1/appointment/post",
         {
           firstName,
           lastName,
