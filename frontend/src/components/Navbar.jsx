@@ -5,8 +5,6 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { Context } from "../main";
 
-const backendUrl = import.meta.env.VITE_BACKEND_URL;
-
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
@@ -31,6 +29,10 @@ const Navbar = () => {
     navigateTo("/login");
   };
 
+  const redirectToChatbot = () => {
+    window.location.href = "https://keshav-portfolio.onrender.com"; 
+  };
+
   return (
     <>
       <nav className={"container"}>
@@ -49,6 +51,11 @@ const Navbar = () => {
               About Us
             </Link>
           </div>
+          {isAuthenticated && (
+            <button className="chatBtn btn" onClick={redirectToChatbot}>
+              Chatbot
+            </button>
+          )}
           {isAuthenticated ? (
             <button className="logoutBtn btn" onClick={handleLogout}>
               LOGOUT
